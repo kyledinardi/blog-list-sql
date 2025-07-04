@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: postgres
+    ports: 
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=mysecretpassword 
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    container_name: blog-list-postgres
